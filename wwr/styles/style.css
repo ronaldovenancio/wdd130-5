@@ -1,22 +1,21 @@
 
      body {
      background-color: rgba(197, 199, 193, 0.8); 
-     }
-     
-     nav a:hover {
-     background-color: rgb(198, 192, 192);
-     }
-     .join:hover, #background, .msg, footer {
-        background-color:rgb(25,32,13, .8);
-     }
+     } 
     <div id="content">
     /*; background: rgb(187,215,138,0.8); color:black" div> */
       div {
-         max-width: 1600;
+         max-width: 1600px;
          margin: 0;
          text-align: center;
          background-color: lightblue; 
          }
+      nav a:hover {
+          background-color: rgb(198, 192, 192);
+          }
+      .join:hover, #background, .msg, footer {
+             background-color:rgb(25,32,13, .8);
+      }
       .book {
           text-align: center;
           border: 1px;
@@ -34,7 +33,7 @@
       .block {
         margin: 0;
         text-align: center;
-        height: 8cm;
+        height: 725px;
         max-width: 1600cm;
         background-color: rgb(233, 206, 163);
        }
