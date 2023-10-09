@@ -47,8 +47,10 @@
               margin-left: 0cm;
             }
       .icon {
+              display:inline-block;
+              margin-left: 20cm;
               width: 80px;
-              margin-right: 28cm;
+             /* margin-right: 0cm; */
               margin-top: -2cm;
             }
       .hero {
