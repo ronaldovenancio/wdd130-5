@@ -1,25 +1,52 @@
-<body>
-     body {
-       background-color: rgba(197, 199, 193, 0.8); 
-     }
-    <div id="content">
-    /*; background: rgb(187,215,138,0.8); color:black" div> */
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+:root {
+/* change the values below to your chosen font(s) */
+  --heading-font: 'Rock Salt';
+  --paragraph-font: Roboto, Croissant One, Lora;
+}
+/* body {
+   background-color: beige;
+   font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
+} */
+body {
+  background-color: #fcfbfb;
+  font-family: Raleway, Arial, sans-serif;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  margin: 0;
+}
+.home-title {
+  font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
+  font-size: 2em;
+  margin-top: 10px;
+}
+   /* <div id="content">
+    /* background: rgb(187,215,138,0.8); color:black" div> */
       div {
          max-width: 1600px;
          margin: 0 auto;
          text-align: center;
-         background-color: lightblue; 
+         background-color: #fcfbfb; 
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
          }
-      
+      h1 {
+        font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
+        text-align: center;
+      }
          #content {
           max-width: 1600px;
           margin: 0 auto;
         }
-    
+    /* </div> */
+ 
       nav a:hover {
           background-color: rgb(198, 192, 192);
           }
-  
+      
+      /*
       .join:hover, #background, .msg, footer {
              background-color:rgb(25,32,13, .8);
       }
@@ -29,20 +56,58 @@
           border: 1px;
           color: rgb(135, 108, 108);   
         }
+      */
+
+      .book, .join {
+        background-color: #d9c2a3;
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 15px 30px;
+        margin-top: 50px;
+        border-radius: 5px;
+      }
+
+      .card-img {
+        border: 10px solid #d9c2a3;
+      }
+
+      main section img {
+        box-sizing: border-box;
+      }
+
+        .rivers-card, .camping-card, .rapids-card {
+          margin: 200px 0;
+        } 
 
       .msg {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        /* background-color: #6f7364; */
+        line-height: 1.5em;
         margin: 0 auto;
+        padding-bottom: 15px;
         text-align: center;
         background-color:rgb(187, 215, 138, 0.8);
         text-decoration: none;
+        color: white;
        }
 
-       .msg a {
-        text-decoration: none;
+       .msg p {
+        padding-bottom: 15px;
        }
+
+       nav a {
+        text-decoration: none;
+        color: #fcfbfb;
+        text-align: center;
+        padding: 35px;
+      }
 
       .block {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
         margin: 0;
+        margin-top: 100px;
+        margin-bottom: 100px;
         text-align: center;
         height: 725px;
         max-width: 1600cm;
@@ -50,49 +115,64 @@
        }
 
        .mountains {
-            width: 20cm;
-            height: 20cm;
-            margin-left: 0cm;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          margin-top: 50px;
+          margin-bottom: 100px;
+          width: 20cm;
+          height: 20cm;
+          margin-left: 0cm;
+          background-color: rgba(197, 199, 193, 0.8); 
        }
 
       .logo {
               width: 80px;
               margin-left: 0cm;
+              padding-top: 5px;
             }
 
       .icon {
               display:inline-block;
-              margin-left: 17cm;
+              margin-left: 5px;
               width: 80px;
              /* margin-right: 0cm; */
               margin-top: -4cm;
+              padding-top: 10px;
             }
+
       .hero {
-              width: 100px;
+              height: 100%;
               margin-left: 0cm;
               max-width: 1600px;
+              background-color: rgba(197, 199, 193, 0.8); 
             }
       .social {
-              display:inline-block;
+              display: inline-block;
               margin-left: 0;
+              background-color: rgb(187, 215, 138, 0.8);
             }
-      nav a, #hero-msg h1, #hero-msg h4, .button-box, main section {
+      h1 {
         text-align: center;
       }
+      nav a, #hero-msg,  h2, p, #hero-msg h4, .button-box, main section {
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 15px;
+      }
+      /*
       img {
         display: inline;
         max-width: 1600px;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
-        background:rgb(189, 188, 188)
+        background-color:rgb(189, 188, 188)
       }
+      */
       #background {
          height: 725px;
       }
-  </div>
-</body>
-      <header>
+ 
+     /* <header> */
             .logo {
               width: 80px;
             }
@@ -100,38 +180,56 @@
               width: 80px;
             }
            img {
-             display: block;
+             display: inline-block;
              max-width: 1600px;
              margin-left: auto;
              margin-right: auto;
              text-align: center;
+             background-color:rgb(189, 188, 188)
             }
            header {
-             background-color:rgb(187, 215, 138, 0.8);
-          }
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color:rgb(187, 215, 138, 0.8);
+           }
           header a {
              text-decoration: none;
-             color: rgb(214, 49, 148);
+             color: rgb(106, 104, 105);
           }
-      </header>
-      <footer>
-           .icon {
-             display: inline;
+    /*  </header> */
+
+    /*  <footer>  */
+           footer .icon {
+             display: inline-block;
              width: 80px;
             }
            footer a {
              display: inline;
              text-decoration: none;
-             color: brown;
+             color: rgb(164, 158, 158);
            }
            footer p {
-               font-size: 1.2em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.2em;
+            text-align: left;
+            text-decoration: none;
+            color: rgb(164, 158, 158);
             } 
-            footer p a:hover {
-               text-decoration: none;      
-          } 
+            footer a:hover {
+               text-decoration: none; 
+               text-align: left; 
+               padding-top: 10px;    
+            } 
             footer {
-               background-color:rgba(187, 215, 138, 0.8);
+              text-align: left;
+              margin-top: 200px;
+              background-color:rgb(187, 215, 138, 0.8);
+              padding: 25px 50px;
             }
-       </footer>
-    
+
+            footer .social img {
+                padding-top: 15px;
+                background-color: rgb(187, 215, 138, 0.8);; 
+            }
+
+     /*  </footer> */
+  
