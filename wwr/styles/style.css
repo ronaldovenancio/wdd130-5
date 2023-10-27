@@ -4,10 +4,8 @@
   --heading-font: 'Rock Salt';
   --paragraph-font: Roboto, Croissant One, Lora;
 }
-/* body {
-   background-color: beige;
-   font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
-} */
+
+
 body {
   background-color: #fcfbfb;
   font-family: Raleway, Arial, sans-serif;
@@ -15,13 +13,168 @@ body {
   margin: 0;
   padding: 0;
 }
+
+header {
+  display: grid;
+  grid-template-columns: 150px auto;
+  justify-self: center;
+  align-self: center;
+  background-color: rgb(155, 135, 107);
+  z-index: 5;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(155, 135, 107);
+  color: white;
+}
+
+#logo_link {
+  padding-top: 5px;
+  justify-self: center;
+  align-self: center;
+  color: white;
+  z-index: 1;
+}
+
+#hero {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 100px;
+    margin-top: -100px;
+}
+
+#hero-box {
+  grid-column: 1/4;
+  grid-row: 1/3;
+  z-index:auto;
+}
+
+#hero-msg h4 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  color: white;
+  z-index: 5;
+}
+
+
+#hero-msg {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-top: 100px;
+  color: white;
+  z-index: 5;
+}
+
+
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 100px;
+}
+
+.card-img, .mountains {
+  width: 100%;
+}
+
+
+.rivers-card  {
+  grid-column: 2/4;
+  grid-row: 2/3; 
+}
+
+
+.camping-card {
+  grid-column: 5/7;
+  grid-row: 2/3;
+}
+ 
+
+.rapids-card {
+  grid-column: 8/10;
+  grid-row: 2/3;
+} 
+
+
+#background {
+  grid-column: 1/11;
+  grid-row: 4/9;
+} 
+
+.mountains {
+  width: 100%;
+  grid-column: 2/7;
+  grid-row: 5/8;
+  background-color: rgb(155, 135, 107);
+  box-shadow: 5px 5px 10px #6f7364;
+} 
+
+.msg {
+  grid-column: 6/10;
+  grid-row: 6/7;
+  background-color: rgb(155, 135, 107);
+}   
+
+footer {
+  display: inline-block;
+  background-color: #6f7364;
+  padding: 25px 50px;
+  margin-top: 200px; 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-img {
+  border: 10px solid #d9c2a3;
+  transition: transform .5s;
+  box-shadow: 5px 5px 10px #6f7364;
+}
+
+
+.card-img:hover {
+  opacity: .6;
+  transform: scale(1.1);
+}
+
+.msg {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #6f7364;
+  line-height: 1.5em;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  padding: 35px;
+  grid-column: 6/10;
+  grid-row: 6/7;
+  box-shadow: 5px 5px 10px #6f7364;
+}
+
+
+ .msg p {
+  padding-bottom: 15px;
+ }
+
+ nav a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  padding: 35px;
+  z-index: 1;
+}
+
+
+
 h2 {
   margin: 0;
 }
 .home-title {
   font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
   font-size: 2em;
-  margin-top: 10px;
+  margin-top: -80px;
+  z-index: 1;
 }
    /* <div id="content">
     /* background: rgb(187,215,138,0.8); color:black" div> */
@@ -46,17 +199,7 @@ h2 {
           background-color: rgb(198, 192, 192);
           }
       
-      /*
-      .join:hover, #background, .msg, footer {
-             background-color:rgb(25,32,13, .8);
-      }
-
-      .book {
-          text-align: center;
-          border: 1px;
-          color: rgb(135, 108, 108);   
-        }
-      */
+    
 
       .book, .join {
         background-color: #d9c2a3;
@@ -68,10 +211,7 @@ h2 {
         border-radius: 5px;
       }
 
-      .card-img {
-        border: 10px solid #d9c2a3;
-      }
-
+    
       main section img {
         box-sizing: border-box;
       }
@@ -80,28 +220,12 @@ h2 {
           margin: 200px 0;
         } 
 
-      .msg {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        /* background-color: #6f7364; */
-        line-height: 1.5em;
-        margin: 0 auto;
-        padding-bottom: 15px;
-        text-align: center;
-        background-color:rgb(187, 215, 138, 0.8);
-        text-decoration: none;
-        color: white;
-       }
-
-       .msg p {
-        padding-bottom: 15px;
-       }
-
-       nav a {
-        text-decoration: none;
-        color: #fcfbfb;
-        text-align: center;
-        padding: 35px;
-      }
+        nav a {
+          text-decoration: none;
+          color: #fcfbfb;
+          text-align: center;
+          padding: 35px;
+        } 
 
       .block {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -114,16 +238,7 @@ h2 {
         background-color: rgb(233, 206, 163);
        }
 
-       .mountains {
-          font-family: Verdana, Geneva, Tahoma, sans-serif;
-          margin-top: 50px;
-          margin-bottom: 100px;
-          width: 20cm;
-          height: 20cm;
-          margin-left: 0cm;
-          background-color: rgba(197, 199, 193, 0.8); 
-       }
-
+       
       .logo {
               width: 80px;
               margin-left: 0cm;
@@ -132,32 +247,38 @@ h2 {
 
       .icon {
               display:inline-block;
-              margin-left: 5px;
+              margin-left: 0px;
               width: 80px;
              /* margin-right: 0cm; */
-              margin-top: -4cm;
-              padding-top: 10px;
+              margin-top: 5px;
+              padding-top: 0px;
             }
 
       .hero {
               height: 100%;
               margin-left: 0cm;
               max-width: 1600px;
-              background-color: rgba(197, 199, 193, 0.8); 
+              background-color: rgba(197, 199, 193); 
             }
       .social {
               display: inline-block;
               margin-left: 0;
-              background-color: rgb(187, 215, 138, 0.8);
+              background-color: #6f7364;
             }
-      h1 {
-        text-align: center;
-      }
-      nav a, #hero-msg,  h2, p, #hero-msg h4, .button-box, main section {
-        text-align: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        padding: 15px;
-      }
+            h1 {
+              text-align: center;
+            }
+            nav a, #hero-msg,  h2, p,  main section {
+              text-align: center;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              padding: 15px;
+            }
+
+            .button-box {
+              max-width: max-content;
+              text-align: center;
+            }
+      
       /*
       img {
         display: inline;
@@ -181,27 +302,13 @@ h2 {
             }
            img {
              display: inline-block;
-             max-width: 1600px;
+             max-width: 100%;
              margin-left: auto;
              margin-right: auto;
              text-align: center;
              background-color:rgb(189, 188, 188)
             }
-           header {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            background-color:rgb(187, 215, 138, 0.8);
-           }
-          header a {
-             text-decoration: none;
-             color: rgb(106, 104, 105);
-          }
-    /*  </header> */
-
-    /*  <footer>  */
-           footer .icon {
-             display: inline-block;
-             width: 80px;
-            }
+           
            footer a {
              display: inline;
              text-decoration: none;
@@ -210,26 +317,72 @@ h2 {
            footer p {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 1.2em;
-            text-align: left;
+            text-align: center;
             text-decoration: none;
             color: rgb(164, 158, 158);
             } 
             footer a:hover {
                text-decoration: none; 
-               text-align: left; 
-               padding-top: 10px;    
+               text-align: center; 
+               padding-top: 0px;    
             } 
+            
+
             footer {
-              text-align: left;
-              margin-top: 200px;
-              background-color:rgb(187, 215, 138, 0.8);
+              background-color: #6f7364;
               padding: 25px 50px;
-            }
+              margin-top: 200px; 
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+          }
 
             footer .social img {
-                padding-top: 15px;
-                background-color: rgb(187, 215, 138, 0.8);; 
+                padding-top: 0px;
+                background-color:rgb(106, 104, 105);
             }
 
      /*  </footer> */
-  
+
+
+     @media screen and (max-width: 900px) {
+      #hero, .home-grid {
+          display: block;
+          height: auto;
+      }
+      nav, footer {
+          flex-direction: column;
+      }
+      nav a {
+          display: block;
+          padding: 15px;
+      }
+      #hero {
+          margin-top: 0;
+      }
+      #hero-msg {
+          margin-top: 0;
+      }
+      #hero-msg h4 {
+          display: none;
+      }
+      .home-title {
+          font-size: 25px;
+          color: #6f7364;
+      }
+      .rivers-card, .camping-card, .rapids-card { 
+          margin: 50px auto;
+          width: 60%;
+      }
+      #background {
+          display: none;
+      }
+      .mountains, .msg {
+          width: 80%;
+          display: block;
+          margin: 0 auto;
+      }
+      footer {
+          margin-top: 25px;
+      }
+  }
