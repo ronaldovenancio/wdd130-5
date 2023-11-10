@@ -5,6 +5,9 @@
   --paragraph-font: Roboto, Croissant One, Lora;
 }
 
+*{
+  box-sizing: border-box;
+}
 
 body {
   background-color: #fcfbfb;
@@ -34,7 +37,7 @@ nav {
   color: white;
 }
 
-#logo_link {
+#logo_link, #logo_link_rivers {
   padding-top: 0;
   justify-self: center;
   align-self: center;
@@ -81,7 +84,7 @@ nav {
 #hero-msg, #river-msg {
   grid-column: 2/3;
   grid-row: 1/2;
-  margin-top: 100px;
+  margin-top: 120px;
   color: white;
   z-index: 5;
 }
@@ -333,9 +336,10 @@ h2 {
        }
 
        
-      .logo {
+      .logo, .logo_rivers {
               width: 80px;
-              margin-left: 0cm;
+              margin-left: 2px;
+              margin-right: 2px;
               padding-top: 0;
               display: inline-flex;
             }
@@ -356,7 +360,8 @@ h2 {
               background-color: rgba(197, 199, 193); 
             }
       .social {
-              display: inline-block;
+              display: inline-flex;
+              width: 80px;
               margin-left: 0;
               background-color: #6f7364;
             }
@@ -388,8 +393,10 @@ h2 {
          height: 725px;
       }
  
-            .logo {
+            .logo, .logo_rivers {
               width: 80px;
+              margin-left: 2px;
+              margin-right: 2px;
             }
             .icon {
               width: 80px;
@@ -400,6 +407,8 @@ h2 {
              margin-left: auto;
              margin-right: auto;
              text-align: center;
+             
+             width: 100%;
              background-color:rgb(189, 188, 188)
             }
            
@@ -436,6 +445,8 @@ h2 {
 
             footer .social img {
                 padding-top: 0px;
+                width: 80px;
+                display: inline-flex;
                 background-color:rgb(106, 104, 105);
             }
 
