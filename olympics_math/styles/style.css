@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+:root {
+/* change the values below to your chosen font(s) */
+  --heading-font: 'Rock Salt';
+  --paragraph-font: Roboto, Croissant One, Lora;
+}
+
+#feedback {
+  background-color: antiquewhite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: .5em;
+  /* make this element invisible until we are ready for it */
+  display: none;      
+}
+.moveDown {
+  margin-top: 3em;
+}
+
+form {
+  /* Center the form on the page */
+  margin: 0 auto;
+  width: 400px;
+  /* Form outline */
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+label {
+  /* Uniform size & alignment */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+
+  /* Uniform text field size */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* Match form field borders */
+  border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  /* Additional highlight for focused elements */
+  border-color: #000;
+}
+
+textarea {
+  /* Align multiline text fields with their labels */
+  vertical-align: top;
+
+  /* Provide space to type some text */
+  height: 5em;
+}
+
+.button {
+  /* Align buttons with the text fields */
+  padding-left: 90px; /* same size as the label elements */
+}
+
+button {
+  /* This extra margin represent roughly the same space as the space
+     between the labels and their text fields */
+  margin-left: 0.5em;
+}
+
+
+
+
+
+
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fcfbfb;
+  font-family: Raleway, Arial, sans-serif;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  width: 100%;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 150px auto;
+  justify-self: center;
+  align-self: center;
+  background-color: rgb(155, 135, 107);
+  z-index: 5;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(155, 135, 107);
+  color: white;
+}
+
+#logo_link, #logo_link_rivers {
+  padding-top: 0;
+  justify-self: center;
+  align-self: center;
+  color: white;
+  z-index: 1;
+  display:inline-flex
+}
+/*
+#headd {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+   grid-template-rows: 100px;
+}
+*/
+
+#hero, #river {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 100px;
+    margin-top: -100px;
+}
+
+#hero-box, #river-box {
+  grid-column: 1/4;
+  grid-row: 1/3;
+  z-index:auto;
+}
+
+#hero-msg h4  {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  color: white;
+  z-index: 5;
+}
+
+#river-msg h4 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  color: white;
+  z-index: 1;
+  margin-top: 10px;
+}
+
+#math-msg h4 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  color: white;
+  z-index: 1;
+  margin-top: 15px;
+}
+
+#hero-msg, #river-msg {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-top: 120px;
+  color: white;
+  z-index: 5;
+}
+
+
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 100px;
+}
+
+.card-img, .mountains, .raftings {
+  width: 100%;
+}
+
+
+.rivers-card  {
+  grid-column: 2/4;
+  grid-row: 2/3; 
+}
+
+
+.camping-card {
+  grid-column: 5/7;
+  grid-row: 2/3;
+}
+ 
+
+.rapids-card {
+  grid-column: 8/10;
+  grid-row: 2/3;
+} 
+
+
+#background {
+  grid-column: 1/11;
+  grid-row: 4/9;
+  width: 100%;
+} 
+
+.mountains {
+  width: 100%;
+  grid-column: 2/7;
+  grid-row: 5/8;
+  background-color: rgb(155, 135, 107);
+  box-shadow: 5px 5px 10px #6f7364;
+} 
+
+.rafting_1 {
+  width: 100%;
+  grid-column: 5/10;
+  grid-row: 6/7;
+  background-color: rgb(155, 135, 107);
+  box-shadow: 5px 5px 10px #6f7364;
+  margin-left: 25px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+} 
+
+.rafting_2 {
+  width: 100%;
+  grid-column: 2/7;
+  grid-row: 7/8;
+  background-color: rgb(155, 135, 107);
+  box-shadow: 5px 5px 10px #6f7364;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+} 
+
+.regional_1 {
+  width: 100%;
+  grid-column: 2/7;
+  grid-row: 6/7;
+  background-color: rgb(155, 135, 107);
+  box-shadow: 5px 5px 10px #6f7364;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+} 
+
+.regional_2 {
+  width: 100%;
+  grid-column: 5/10;
+  grid-row: 7/8;
+  background-color: rgb(155, 135, 107);
+  box-shadow: 5px 5px 10px #6f7364;
+  margin-left: 25px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+} 
+
+
+
+.msg {
+  grid-column: 6/10;
+  grid-row: 6/7;
+  background-color: rgb(155, 135, 107);
+}   
+
+.msg-rafting_1 {
+grid-column: 2/5;
+grid-row: 6/7;
+background-color: rgb(191 203 206);
+margin-right: 25px;
+margin-bottom: 25px;
+margin-top: 25px;
+}   
+
+.msg-regional_1 {
+  grid-column: 7/10;
+  grid-row: 6/7;
+  background-color: rgb(191 203 206);
+  margin-left: 25px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  }   
+
+  .msg-regional_2 {
+    grid-column: 2/5;
+    grid-row: 7/8;
+    background-color: rgb(191 203 206);
+    margin-right: 25px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+
+.msg-rafting_1 p, .msg-rafting_2 p, .msg-regional_1 p, .msg-regional_2 {  
+  text-align: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }   
+  
+  
+.msg-rafting_2 {
+  grid-column: 7/10;
+  grid-row: 7/8;
+  background-color: rgb(191 203 206);
+  margin-left: 25px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  }  
+
+
+footer {
+  display: inline-block;
+  background-color: #6f7364;
+  padding: 20px 20px;
+  margin-top: 100px; 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-img {
+  border: 10px solid #d9c2a3;
+  transition: transform .5s;
+  box-shadow: 5px 5px 10px #6f7364;
+}
+
+
+.card-img:hover {
+  opacity: .6;
+  transform: scale(1.1);
+}
+
+.msg {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #6f7364;
+  line-height: 1.5em;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  padding: 35px;
+  grid-column: 6/10;
+  grid-row: 6/7;
+  box-shadow: 5px 5px 10px #6f7364;
+}
+
+
+ .msg p {
+  padding-bottom: 15px;
+ }
+
+ nav a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  z-index: 1;
+}
+
+
+
+h2 {
+  margin: 0;
+}
+.home-title {
+  font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
+  font-size: 2em;
+  margin-top: -70px;
+  z-index: 1;
+}
+   /* <div id="content">
+    /* background: rgb(187,215,138,0.8); color:black" div> */
+      div {
+         width: 100%;
+         margin: 0 auto;
+         text-align: center;
+         background-color: #fcfbfb; 
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+         }
+      h1 {
+        font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
+        text-align: center;
+      }
+
+      p {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: left;
+      }
+         
+        
+    /* </div> */
+ 
+      nav a:hover {
+          background-color: rgb(198, 192, 192);
+          }
+      
+    
+
+      .book, .n {
+        background-color: #d9c2a3;
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 15px 30px;
+        margin-top: 50px;
+        border-radius: 5px;
+      }
+
+
+      .book, .join {
+        background-color: #d9c2a3;
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 15px 30px;
+        margin-top: 50px;
+        border-radius: 5px;
+      }
+
+      .join-river {
+        background-color:rgb(133, 161, 168);
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 15px 30px;
+        margin-top: 50px;
+        border-radius: 5px;
+      }
+
+    
+      main section img {
+        box-sizing: border-box;
+      }
+
+        .rivers-card, .camping-card, .rapids-card {
+          margin: 200px 0;
+        } 
+
+        nav a {
+          text-decoration: none;
+          color: #fcfbfb;
+          text-align: center;
+          padding: 10px;
+        } 
+
+      .block {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        text-align: center;
+        height: 725px;
+        max-width: 1600cm;
+        background-color: rgb(233, 206, 163);
+       }
+
+       
+      .logo, .logo_rivers {
+              width: 80px;
+              margin-left: 2px;
+              margin-right: 2px;
+              padding-top: 0;
+              display: inline-flex;
+            }
+
+      .icon {
+              display:inline-block;
+              margin-left: 0px;
+              width: 80px;
+             /* margin-right: 0cm; */
+              margin-top: 5px;
+              padding-top: 0px;
+            }
+
+      .hero {
+              height: 100%;
+              margin-left: 0cm;
+              max-width: 1600px;
+              background-color: rgba(197, 199, 193); 
+            }
+      .social {
+              display: inline-flex;
+              width: 80px;
+              margin-left: 0;
+              background-color: #6f7364;
+            }
+            h1 {
+              text-align: center;
+            }
+            nav a, #hero-msg,  h2, p,  main section {
+              text-align: center;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              padding: 10px;
+            }
+
+            .button-box {
+              max-width: max-content;
+              text-align: center;
+            }
+      
+      
+      img {
+        display: inline;
+        max-width: 1600px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        background-color:rgb(189, 188, 188)
+      }
+      
+      #background {
+         height: 725px;
+      }
+ 
+            .logo, .logo_rivers {
+              width: 80px;
+              margin-left: 2px;
+              margin-right: 2px;
+            }
+            .icon {
+              width: 80px;
+            }
+           img {
+             display: inline-block;
+             max-width: 100%;
+             margin-left: auto;
+             margin-right: auto;
+             text-align: center;
+             
+             width: 100%;
+             background-color:rgb(189, 188, 188)
+            }
+           
+           footer a {
+             display: inline;
+             text-decoration: none;
+             color: rgb(164, 158, 158);
+           }
+           footer p {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.0em;
+            text-align: center;
+            text-decoration: none;
+            color: rgb(164, 158, 158);
+            } 
+            footer a:hover {
+               text-decoration: none; 
+               text-align: center; 
+               padding-top: 0px;    
+            } 
+
+
+            /*
+
+            footer {
+              background-color: #6f7364;
+              padding: 20px 20px;
+              margin-top: 100px; 
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+          }
+            */
+
+            footer .social img {
+                padding-top: 0px;
+                width: 80px;
+                display: inline-flex;
+                background-color:rgb(106, 104, 105);
+            }
+
+     /*  </footer> */
+
+
+     @media screen and (max-width: 900px) {
+      #hero, .home-grid {
+          display: block;
+          height: auto;
+      }
+      nav, footer {
+          flex-direction: column;
+      }
+      nav a {
+          display: block;
+          padding: 10px;
+      }
+      #hero {
+          margin-top: 0;
+      }
+      #hero-msg {
+          margin-top: 0;
+      }
+      #hero-msg h4 {
+          display: none;
+      }
+      .home-title {
+          font-size: 25px;
+          color: #6f7364;
+      }
+      .rivers-card, .camping-card, .rapids-card { 
+          margin: 50px auto;
+          width: 60%;
+      }
+      #background {
+          display: none;
+      }
+      .mountains, .msg, .raftings {
+          width: 80%;
+          display: block;
+          margin: 0 auto;
+      }
+
+  }
