@@ -307,20 +307,37 @@ margin-top: 25px;
   .msg-regional_2 p {
     text-align: left;
     font-size: 1.5em;
+    text-indent: 50px;
   }
 
   .msg-rafting_1 p {
     text-align: left;
     font-size: 1.4em;
+    text-indent: 50px;
   }
   .msg-regional_1 p {
     text-align: left;
     font-size: 1.2em;
+    text-indent: 50px;
+    
   }
 
  .msg-rafting_2 {
     text-align: left;
     font-size: 1.35em;
+    text-indent: 50px;
+  }
+
+  .msg-regional_1 h2, .msg-regional_2 h2 {
+    text-align: center;
+    font-size: 2.0em;
+    color:#6f7364;
+  }
+
+  .msg-rafting_1 h2, .msg-rafting_2 h2 {
+    text-align: center;
+    font-size: 1.8em;
+    color:#6f7364;
   }
 
 .msg-rafting_1 p, .msg-rafting_2 p, .msg-regional_1 p, .msg-regional_2 {  
@@ -380,6 +397,7 @@ footer {
 
  .msg p {
   padding-bottom: 15px;
+  text-align:left;
  }
 
  nav a {
@@ -535,6 +553,38 @@ h2 {
               padding: 10px;
             }
 
+
+            #hero-msg h1 {
+              text-align: center;
+              font-family: Playfair Display, Roboto, Croissant One, Lora;
+              font-size: 2.5em;
+              padding: 15px;
+            }
+
+
+            #hero-msg h2 {
+              text-align: center;
+              font-family: Playfair Display, Roboto, Croissant One, Lora;
+              font-size: 2.0em;
+              padding: 15px;
+            }
+
+
+            #river-msg h1 {
+              text-align: center;
+              font-family: Playfair Display, Roboto, Croissant One, Lora;
+              font-size: 2.5em;
+              padding: 15px;
+            }
+
+
+            #river-msg h2 {
+              text-align: center;
+              font-family: Playfair Display, Roboto, Croissant One, Lora;
+              font-size: 2.0em;
+              padding: 15px;
+            }
+
             .button-box {
               max-width: max-content;
               text-align: center;
@@ -637,7 +687,7 @@ h2 {
           font-size: 60px;
       }
       .home-title {
-          font-size: 25px;
+          font-size: 30px;
           color:#f6d270;
       }
 
@@ -646,12 +696,12 @@ h2 {
         color:#f6d270;
       }
       .homesub-title {
-        font-size: 18px;
+        font-size: 25px;
         color: #f1e58e;
       }
 
     .homesub-title-2 {
-      font-size: 18px;
+      font-size: 50px;
       color: #f1e58e;
     }
       .rivers-card, .camping-card, .rapids-card { 
